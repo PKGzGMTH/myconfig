@@ -1,0 +1,62 @@
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"blocks": [
+	  {
+		"alignment": "left",
+		"segments": [
+		{
+			"background": "#8fe1a1",
+			"foreground": "#3d3d3d",
+			"leading_diamond": "\ue0b6",
+			"properties": {
+				"template": " \uf503 {{ .UserName }} "
+			},
+			"style": "diamond",
+			"type": "session"
+		},
+		{
+			"background": "#37bfa7",
+			"foreground": "#3d3d3d",
+			"powerline_symbol": "\ue0b0",
+			"properties":
+			{
+				"style": "folder",
+				"template": " \ue5ff {{ .Path }} "
+			},
+			"style": "powerline",
+			"type": "path"
+		},
+		{
+			"background": "#387ac4",
+			"foreground": "#ffffff",
+			"powerline_symbol": "\ue0b0",
+			"properties":
+			{
+				"branch_icon": "",
+				"fetch_stash_count": true,
+				"fetch_status": false,
+				"fetch_upstream_icon": true,
+				"template": " \u279c ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) "
+			},
+			"style": "powerline",
+			"type": "git"
+		},
+		{
+			"background": "#534582",
+			"foreground": "#ffffff",
+			"properties":
+			{
+				"template": " \u2665 {{ .CurrentDate | date .Format }} ",
+				"time_format": "15:04"
+			},
+			"style": "diamond",
+			"trailing_diamond": "\ue0b0",
+			"type": "time"
+		}
+		],
+		"type": "prompt"
+	}
+	],
+	"final_space": true,
+	"version": 1
+}
